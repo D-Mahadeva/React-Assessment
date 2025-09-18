@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { users } from '../data/userdata';
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ const Login = ({ onLogin }) => {
       localStorage.setItem('currentUser', JSON.stringify(user));
       onLogin(user);
       setError('');
+      navigate('/products');
     } else {
       setError('Invalid username or password');
     }
@@ -44,7 +47,6 @@ const Login = ({ onLogin }) => {
         </div>
         {error && <div className="error">{error}</div>}
         <button type="submit">Login</button>
-
       </form>
     </div>
   );

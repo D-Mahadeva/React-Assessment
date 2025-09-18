@@ -309,3 +309,25 @@ body {
     padding: 2rem;
   }
 }
+
+.welcome-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.signup-link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.signup-link a:hover {
+  color: #bbb;
+}
