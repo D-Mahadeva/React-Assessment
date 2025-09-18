@@ -24,7 +24,7 @@ function App() {
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('currentUser');
-    navigate('/login');
+    navigate('/');
   };
 
   return (
